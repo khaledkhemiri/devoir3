@@ -9,13 +9,13 @@ serversocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 serversocket.bind((host,port))
 serversocket.setblocking(0)
 
-print "Le serveur a commence"
+print "Le serveur a commencé"
 
 while True:
     try:
         data, addr = serversocket.recvfrom(1024) 
             
-        print time.ctime(time.time()) + str(addr) + ": " + str(data)
+        print time.ctime(time.time()) + str(addr) + " : " + str(data)
     except:
         pass
 serversocket.close()
