@@ -22,12 +22,12 @@ print("The time got from the server is %s" % tm.decode('ascii'))
 s.bind((host,port))
 while True:
 
-      data = raw_input("Enter..... ")
+      data = raw_input("Enter... ")
       s.sendto(data,(host,port))
 
       print "Server says: " + s.recv(1024)
 
       if data=="bye" or s.recv(1024)=="bye":
-           print "Exiting..........."
+           print "Exiting..."
            time.sleep(1)
            break
